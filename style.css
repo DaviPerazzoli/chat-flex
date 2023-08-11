@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+:root{
+    --cor0: #202123;
+    --cor1: #343541;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+aside{
+    flex-basis: 45px;
+    background-color: var(--cor1);
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+aside ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+aside li{
+    display: none;
+}
+
+aside li#novo{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+aside li#novo span{
+    color: rgba(255, 255, 255, 0.671);
+}
+
+main{
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor1);
+}
+
+main *{
+    text-align: center;
+}
+
+main > h1{
+    margin-top: 150px;
+    font-weight: 600;
+    color: #575b69;
+}
+
+main > section{
+    display: none;
+}
+
+main > form{
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+    width: 100%;
+}
+
+main > form > p{
+    display: flex;
+    align-items: center;
+    background-color: #40414F;
+    margin: 10px 10px 0 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+main > form > p > input{
+    background-color: #40414F;
+    border: none;
+    font-size: 1.05em;
+}
+
+main > form > p > input[type="text"]{
+    color: white;
+    flex: 1 1 100px;
+    text-align: left;
+}
+
+main > form > p > input[type="text"]:focus{
+    border: none;
+}
+
+main > form > p > input[type="submit"]{
+    color: #6B6C7B;
+    font-size: 1.1em;
+}
+
+main > form > footer{
+    color: rgba(255, 255, 255, 0.61);
+    font-size: 0.75em;
+    padding: 10px 4px 10px 4px;
+    line-height: 1.5em;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (min-width: 900px){
+    body{
+        flex-direction: row;
+    }
+
+    aside{
+        flex: 100px;
+        background-color: var(--cor0);
+    }
+
+    aside li{
+        display: list-item;
+    }
+
+    aside li#novo{
+        height: auto;
+        flex-direction: row-reverse;
+        justify-content: left;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 5px;
+        margin: 10px;
+    }
+
+    aside li#novo span#menu{
+        display: none;
+    }
+
+    
+}
